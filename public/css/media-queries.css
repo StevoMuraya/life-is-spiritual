@@ -1,0 +1,164 @@
+@media screen and (max-width: 1000px) {
+    .mid-navbar {
+        justify-content: flex-start;
+        padding: 0 1rem;
+    }
+    .nav-options {
+        position: absolute;
+        top: -50rem;
+        left: 0;
+        right: 0;
+        height: fit-content;
+        transition: all 200ms ease-in-out;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.938)
+        );
+    }
+    .nav-options.show {
+        top: 6.5rem;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.637),
+            rgb(0, 0, 0)
+        );
+    }
+    .nav-options.show.sticky {
+        top: 4rem;
+        background: rgba(0, 0, 0, 0.904);
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+    }
+    .nav-link {
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    .nav-list {
+        padding: 0 1rem;
+    }
+    .nav-link.active::before {
+        width: 100%;
+    }
+    .nav-list:hover > .nav-link::before {
+        width: 100%;
+    }
+    .logo-holder {
+        margin-right: 2rem;
+    }
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+        min-width: 2.5rem;
+    }
+    .blogs-rowss .other-blog.blogs {
+        flex: 1;
+    }
+
+    .blogs-rowss .other-blog.blogs {
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .top-left {
+        display: none;
+    }
+    .books-holder {
+        justify-content: center;
+    }
+    .book-card {
+        margin: 1rem;
+    }
+    .other-desc {
+        padding-top: 1rem;
+    }
+    .book-containers {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .left-back-show {
+        display: none;
+    }
+    .right-back-show {
+        background-color: #fff;
+    }
+    .right-back-show {
+        width: 100%;
+    }
+    .top-show {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .other-blog {
+        min-width: 250px;
+        justify-content: center;
+    }
+    .other-blog-img {
+        max-width: 100%;
+        width: 100%;
+    }
+    .about-us-container {
+        width: 100%;
+    }
+    .curosel-buttons {
+        padding: 0 1rem;
+    }
+
+    .indicator {
+        align-items: flex-end;
+        padding-bottom: 2.5rem;
+    }
+    .image-row {
+        width: 90%;
+    }
+    .blogs-rowss .other-blog.blogs {
+        max-height: 400px;
+    }
+    .other-blog-img {
+        max-height: 180px;
+    }
+}
+@media screen and (max-width: 517px) {
+    /* .other-blog-img {
+        max-height: 180px;
+    } */
+}
+@media screen and (max-width: 500px) {
+    .other-blog {
+        height: 400px;
+    }
+    .site-info {
+        width: 100%;
+    }
+    .the-call {
+        padding: 2rem 1rem;
+    }
+    .blogs-rowss .other-blog.blogs {
+        max-height: unset;
+    }
+}
+@media screen and (max-width: 400px) {
+    .view-more-books {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .video-section .row {
+        width: 100%;
+    }
+
+    .testimonials-title,
+    .videos-title {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+    }
+}

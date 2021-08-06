@@ -1,0 +1,14 @@
+@media screen and (max-width: 800px) {
+  .main-content {
+    width: 100%;
+  }
+  .side-bar {
+    left: -100%;
+  }
+  .side-bar.show {
+    left: 0%;
+  }
+  .hamburger {
+    right: 2%;
+  }
+}

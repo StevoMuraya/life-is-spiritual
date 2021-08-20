@@ -10,6 +10,6 @@
     </head>
 <body>
     @yield('dash-content')
-    <script src="./management/js/hamburger.js"></script>
+    <script src="{{ asset('management/js/hamburger.js') }}"></script>
 </body>
 </html>

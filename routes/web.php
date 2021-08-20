@@ -9,8 +9,10 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeBlogsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomeGalleryController;
+use App\Http\Controllers\HomeSelected;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ManageHomeController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\TestimonialController;
@@ -46,6 +48,11 @@ Route::get('book/{book}/view', [BookViewController::class,'index']) ->name('book
 
 Route::get('about', [AboutController::class,'index']) ->name('about');
 
+Route::get('contact', [AboutController::class,'index']) ->name('contact');
+
+Route::get('home-manage', [ManageHomeController::class,'index']) ->name('home-manage');
+Route::post('home-manage', [ManageHomeController::class,'add_slider']);
+
 Route::get('dashboard', [DashboardController::class,'index']) ->name('dashboard');
 Route::post('dashboard', [DashboardController::class,'add_book']);
 
@@ -67,5 +74,13 @@ Route::post('login', [LoginController::class,'login']);
 Route::post('registerAdmin', [RegistrationController::class,'store']) ->name('registerAdmin');
 
 Route::post('logout', [LogoutController::class,'logout']) ->name('logout');
+
+// Route::resource('selectedHome', 'HomeSelected', ['parameters' => [
+//     'home' => 'home'
+// ]]);
+
+Route::post('home/{home}/view', [HomeSelected::class,'save']) ->name('home.view');
+Route::get('home/{home}/view', [HomeSelected::class,'show']);
+// Route::resource('selected-home', HomeSelected::class);
 
 

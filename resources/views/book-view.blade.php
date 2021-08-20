@@ -16,7 +16,8 @@
       </div>
       <div class="mid-navbar" id="navbar">
         <div class="logo-holder">
-          <img src="./images/logo.png" alt="Logo" class="logo" />
+          
+          <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo" />
         </div>
         <div class="nav-options" id="nav_options">
           <ul class="nav-links">
@@ -188,5 +189,6 @@
     </div>
   </section>
 </div>
-<script src="./js/nav.js"></script>
+<script src="{{ asset('js/nav.js') }}"></script>
+
 @endsection

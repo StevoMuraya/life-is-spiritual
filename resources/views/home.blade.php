@@ -4,8 +4,11 @@
 <div class="site-container">
     <div class="hero-landing">
       <div class="image-slider" id="image_slider">
-        <img src="./images/give1-new.jpg" alt="" class="image-in-slider" />
-        <img src="./images/give2-new.jpg" alt="" class="image-in-slider" />
+        @if ($sliders->count())
+          @foreach ($sliders as $slider)
+            <img src="http://localhost:8000/storage/sliders/{{ $slider->slider_image }}" alt="" class="image-in-slider" />
+          @endforeach
+        @endif
       </div>
       <div class="slider-indicator" id="dot_incicators">
       </div>
@@ -68,21 +71,23 @@
       </nav>
       <section class="landing-page">
         <div class="sliding-title-text">
-          <h1 class="landing-title active">
-            We are dedicated to helping<br />the poor in Uganda.
-          </h1>
-          <h1 class="landing-title">Help us help those<br />who need it.</h1>
+          @if ($sliders->count())
+            @foreach ($sliders as $slider)
+            <h1 class="landing-title" style="">
+              {{ ($slider->title) }}
+            </h1>
+            @endforeach
+          @endif
         </div>
         
         <div class="sliding-land-text">
+          @if ($sliders->count())
+          @foreach ($sliders as $slider)
           <h3 class="landing-text">
-            Partner with us by donating through Paypal Address:<br />info@lifespiritual.org
-            or click the button below.
+           {{ $slider->sub_title }}
           </h3>
-          <h3 class="landing-text">
-            Partner with us by donating through Paypal Address:<br />info@lifespiritual.org
-            or click the button below.
-          </h3>
+          @endforeach
+        @endif
         </div>
         <a href="" class="btn donate">Donate</a>
       </section>
@@ -203,7 +208,6 @@
           </div>
         </div>
       </div>
-      <div class="testimonoals-section"></div>
     </section>
     <section class="video-section">
       <div class="row">

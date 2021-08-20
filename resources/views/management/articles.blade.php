@@ -14,6 +14,9 @@
       <div class="links-tab">
         <ul class="links">
           <li class="link-list">
+            <a href="{{ route('home-manage') }}" class="link">Home</a>
+          </li>
+          <li class="link-list">
             <a href="{{ route('dashboard') }}" class="link">Books</a>
           </li>
           <li class="link-list">
